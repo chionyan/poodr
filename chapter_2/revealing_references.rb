@@ -6,7 +6,13 @@ class RevealingReferences
   end
 
   def diameters
-    wheels.collect { |wheel| wheel.rim + (wheel.tire * 2) }
+    # refactor 1: 配列を繰り返し処理する
+    wheels.collect { |wheel| diameter(wheel) }
+  end
+
+  def diameter(wheel)
+    # refactor 2: 「1つ」の車輪の直径を計算する
+    wheel.rim + (wheel.tire * 2)
   end
 
   # 変更箇所はここから先だけでよくなる
