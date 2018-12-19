@@ -3,10 +3,10 @@ require_relative 'wheel'
 class Gear
   attr_reader :chainring, :cog, :wheel
 
-  def initialize(chainring, cog, wheel)
+  def initialize(chainring, cog, rim, tire)
     @chainring = chainring
     @cog = cog
-    @wheel = wheel
+    @wheel = Wheel.new(rim, tire)
   end
 
   def gear_inches
