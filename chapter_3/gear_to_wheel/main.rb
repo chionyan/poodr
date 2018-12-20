@@ -1,4 +1,4 @@
-require_relative '../my_helper'
+require './my_helper'
 my_require __FILE__
 
 class Main

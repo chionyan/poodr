@@ -1,4 +1,4 @@
-require_relative '../wheel'
+require_relative 'wheel'
 
 # Gear が外部インターフェースの一部の場合
 module GearFrameWork
