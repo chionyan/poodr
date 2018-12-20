@@ -11,7 +11,7 @@ class Gear
   end
 
   def gear_inches
-    ratio * wheel.diameter
+    ratio * diameter
   end
 
   def ratio
@@ -20,5 +20,9 @@ class Gear
 
   def wheel
     @wheel ||= Wheel.new(rim, tire)
+  end
+
+  def diameter
+    wheel.diameter
   end
 end
