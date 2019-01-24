@@ -10,11 +10,11 @@ class Trip
 
   def prepare(preparers)
     preparers.each do |preparer|
-      if preparer.kind_of?(Mechanic)
+      if preparer.respond_to?(:prepare_bicycles)
         preparer.prepare_bicycles(bicycles)
-      elsif preparer.kind_of?(TripCoordinator)
+      elsif preparer.respond_to?(:buy_food)
         preparer.buy_food(customers)
-      elsif preparer.kind_of?(Driver)
+      elsif preparer.respond_to?(:gas_up)
         preparer.gas_up(vehicle)
         preparer.fill_water_tank(vehicle)
       end
