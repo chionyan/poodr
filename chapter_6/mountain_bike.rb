@@ -1,5 +1,7 @@
 require_relative 'bicycle'
 
+# Bicycle のサブクラスのまま(Bicycke は現在空になっている)。
+# コードは何も変更されていない。
 class MountainBike < Bicycle
   attr_reader :front_shock, :rear_shock
 
@@ -14,11 +16,10 @@ class MountainBike < Bicycle
   end
 end
 
-mountain_bike = MountainBike.new(
+moutain_bike = MountainBike.new(
   size: 'S',
   front_shock: 'Manitou',
   rear_shock: 'Fox'
 )
 
-p mountain_bike.size
-p mountain_bike.spares
+p moutain_bike.size
