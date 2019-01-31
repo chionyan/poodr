@@ -1,7 +1,5 @@
 require_relative 'bicycle'
 
-# Bicycle のサブクラスのまま(Bicycke は現在空になっている)。
-# コードは何も変更されていない。
 class MountainBike < Bicycle
   attr_reader :front_shock, :rear_shock
 

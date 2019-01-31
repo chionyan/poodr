@@ -1,13 +1,11 @@
 require_relative 'bicycle'
 
-# いまは Bicycle のサブクラス。
-# かつてのBicycle クラスからのコードをすべて含む。
 class RoadBike < Bicycle
-  attr_reader :size, :tape_color
+  attr_reader :tape_color
 
    def initialize(**args)
-    @size = args[:size]
     @tape_color = args[:tape_color]
+    super(args) # <- RoadBike は 'super' を必ず呼ばなければなくなった
    end
 
    # 全ての自転車は、デフォルト値として同じタイヤサイズとチェーンサイズを持つ
